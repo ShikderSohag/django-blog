@@ -1,0 +1,23 @@
+{% extends "blog.html" %}
+
+
+{% block content %}
+
+
+
+    {% for post in posts %}
+<div class="container">
+<div class ="post_thumbnail">
+    <img src="{{ post.post_thumbnail.url }}" alt="" srcset="">
+</div>
+   <h3> {{ post.post_title }} </h3>
+    <small>{{ post.pub_date_pretty }}</small> <br>
+
+    <p>{{ post.summary }}....</p>
+    <button><a href="{% url 'detail' post.id %}"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>Read More</a></button>
+
+
+
+</div>
+    {% endfor %}
+{% endblock %}

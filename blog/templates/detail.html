@@ -1,0 +1,16 @@
+{% extends 'blog.html' %}
+{% block content %}
+
+<div class="container">
+<div class="post_thumbnail_detail">
+<img src="{{ post.post_thumbnail.url }}" alt="" srcset="">
+</div>
+<h3>{{ post.post_title }}</h3>
+<small> <strong>Posted on:</strong>{{ post.pub_date_pretty }}</small> 
+<hr/>
+<p>{{ post.post_content }}</p>
+<button><a href="{% url 'blog' %}"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Back To Home</a></button>
+</div>
+
+{% endblock %}
+

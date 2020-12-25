@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog-Created by Django</title>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>{{ post.post_title }}</title>
 </head>
 <body>
-    <h2>Hellow Form Blog The App</h2>
+
+{% block content %}
+
+{% endblock %}
 </body>
 </html>
